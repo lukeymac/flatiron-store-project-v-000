@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :carts
-  belongs_to :current_cart, :cass_name => "Cart"
+  belongs_to :current_cart, :class_name => "Cart"
 
   def create_current_cart
     new_cart = carts.create
@@ -17,5 +17,5 @@ class User < ActiveRecord::Base
     self.current_cart_id = nil
     save
   end
-  
+
 end
