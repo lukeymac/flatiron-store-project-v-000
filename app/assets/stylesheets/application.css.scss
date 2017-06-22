@@ -20,8 +20,21 @@
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
 body {
-  padding-top: 70px;
+  padding-top: 80px;
   padding-bottom: 30px;
+}
+
+.whitetext {
+  color: white;
+}
+
+.navbar{
+  background-color: rgb(0, 116, 184);
+  position: fixed;
+  top: 0;
+  height: 75px;
+  width: 100%;
+  z-index: 2000;
 }
 
 .theme-dropdown .dropdown-menu {
