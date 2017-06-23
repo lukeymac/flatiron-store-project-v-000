@@ -20,7 +20,7 @@
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
 body {
-  padding-top: 80px;
+  padding-top: 100px;
   padding-bottom: 30px;
 }
 
@@ -28,11 +28,14 @@ body {
   color: white;
 }
 
-.navbar{
+a p:hover {
+  color: lightblue;
+}
+
+.navbar {
   background-color: rgb(0, 116, 184);
   position: fixed;
   top: 0;
-  height: 75px;
   width: 100%;
   z-index: 2000;
 }

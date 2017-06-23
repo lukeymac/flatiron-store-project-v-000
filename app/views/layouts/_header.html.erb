@@ -1,16 +1,12 @@
-<nav class="navbar">
-    <div class="container-fluid">
-      <div class="nav navbar-header">
-        <h4 class="nav navbar-brand"> <%= link_to "Store Home", store_path, class: "whitetext" %> </h4>
-      </div>
-      <% if current_user && current_user.current_cart %>
-        <div class="nav navbar-nav">
-            <%= link_to cart_path(current_user.current_cart) do %>
-              <br><p class="whitetext"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</p>
-            <% end %>
-        </div>
+<nav class="navbar navbar-toggleable-*">
+  <%= link_to store_path do %>
+    <p class="navbar-brand whitetext">Flatiron Store</p>
+  <% end %>
+  <% if current_user && current_user.current_cart %>
+      <%= link_to cart_path(current_user.current_cart) do %>
+        <p class="whitetext navbar-text"><span class="glyphicon glyphicon-shopping-cart"></span> Cart</p>
       <% end %>
+  <% end %>
 
-        <%= render partial: 'layouts/sign_in' %>
-    </div>
+  <%= render partial: 'layouts/sign_in' %>
 </nav>

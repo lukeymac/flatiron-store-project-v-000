@@ -1,17 +1,17 @@
 <% if user_signed_in? %>
-  <div class="nav navbar-nav navbar-right">
-    <li><i class="glyphicon glyphicon-user"></i> Signed in as <%= current_user.email %> </li>
-      <%= link_to destroy_user_session_path, method: :delete do %>
-        <p class="whitetext"><span class="glyphicon glyphicon-log-out"></span> Sign Out</p>
-      <% end %>
-  </div>
+  <ul class="nav navbar-nav navbar-right">
+    <p class="navbar-text whitetext"><i class="glyphicon glyphicon-user"></i> Signed in as <%= current_user.email %> </p>
+    <%= link_to destroy_user_session_path, method: :delete do %>
+      <p class="navbar-text whitetext"><span class="glyphicon glyphicon-log-out"></span> Sign Out</p>
+    <% end %>
+  </ul>
 <% else %>
   <ul class="nav navbar-nav navbar-right">
-    <li>
-      <%= link_to new_user_session_path do %>
-        <span class="glyphicon glyphicon-user"></span>
-      <% end %>
-    </li>
-    <li><a class="navbar-link"><span class="glyphicon glyphicon-log-in"></span> <%= link_to 'Sign up', new_user_registration_path %> </a></li>
+    <%= link_to new_user_session_path do %>
+      <p class="navbar-text whitetext"><span class="glyphicon glyphicon-log-in"></span> Sign In</p>
+    <% end %>
+    <%= link_to new_user_registration_path do %>
+      <p class="navbar-text whitetext"><span class="glyphicon glyphicon-user"></span> Sign Up</p>
+    <% end %>
   </ul>
 <% end %>
